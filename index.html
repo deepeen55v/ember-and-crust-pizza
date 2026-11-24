@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9f2e6">
+  <meta name="description" content="Ember & Crust pizza menu, takeaway deals and demo pickup and delivery ordering in Campsie, NSW.">
+  <title>Ember & Crust Pizza</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="data/shop.js"></script>
+  <script defer src="data/menu.js"></script>
+  <script defer src="ordering.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#menu">Skip to the menu</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#" aria-label="Ember & Crust home"><img src="assets/mark.svg" width="47" height="47" alt=""><span><strong data-shop></strong><small>PIZZA TAKEAWAY</small></span></a>
+      <nav aria-label="Main navigation"><a href="#menu">Menu</a><a href="#deals">Deals</a><a href="#find-us">Find Us</a></nav>
+      <button class="button cart-top" data-cart><span aria-hidden="true" class="cart-icon"></span><span>Cart</span><span class="count" data-count>0</span></button>
+    </div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow location" data-locality></p>
+          <h1 id="hero-title">Good pizza.<br><em>Close to home.</em></h1>
+          <p class="hero-description">Crisp edges, generous toppings and a box worth sharing. Pick it up hot or get it delivered.</p>
+          <div class="hero-actions"><button class="button primary" data-start="pickup">Order Pickup <span aria-hidden="true">↗</span></button><button class="button outline" data-start="delivery">Order Delivery <span aria-hidden="true">↗</span></button></div>
+          <div class="hero-meta"><span id="store-state"></span><a id="hero-contact" href="#find-us">Shop hours &amp; location</a></div>
+          <p id="sample-banner" class="sample-note" hidden>Demo site · Sample menu, prices and shop details</p>
+        </div>
+        <div class="hero-visual"><img id="hero-photo" sizes="(max-width: 720px) 100vw, 54vw" width="1500" height="1000" fetchpriority="high" alt=""><div class="checker" aria-hidden="true"></div></div>
+      </div>
+    </section>
+
+    <div class="shell menu-shell" id="menu">
+      <div class="menu-intro"><div><p class="eyebrow">TAKEAWAY MENU</p><h2>What’s for dinner?</h2></div><div class="mode-summary"><button class="button outline mode-button" id="menu-mode"><span id="menu-mode-label">Pickup</span><span aria-hidden="true">⌄</span></button><small id="mode-details"></small></div></div>
+      <nav class="category-nav" aria-label="Menu categories"><div class="category-bar" id="categories"></div></nav>
+      <div id="menu-sections"></div>
+    </div>
+
+    <section class="find-section" id="find-us" aria-labelledby="find-title">
+      <div class="shell find-grid">
+        <div><p class="eyebrow">FIND US</p><h2 id="find-title">Your local pizza shop</h2><p id="about"></p><p id="address"></p><p id="phone"></p><a class="button outline" id="directions" href="https://www.google.com/maps" hidden>Get directions <span aria-hidden="true">↗</span></a></div>
+        <div><h3>Opening hours</h3><dl id="hours" class="hours"></dl></div>
+        <div><h3>Delivery suburbs</h3><ul id="zones"></ul><p id="delivery-minimum"></p><button class="button outline" data-start="delivery">Check your postcode</button></div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="shell footer-inner"><span data-shop></span><span data-locality></span></div></footer>
+
+  <button class="button primary mobile-cart" data-cart><span>View Cart <span class="count" data-count>0</span></span><span id="mobile-total">$0.00</span></button>
+  <p class="sr-only" id="announcer" role="status"></p>
+  <dialog id="order-dialog" aria-labelledby="order-title"><div class="dialog-head"><h2 id="order-title"></h2><button class="button close" type="button" data-close aria-label="Close">×</button></div><div class="dialog-content" id="order-content"></div></dialog>
+  <dialog id="cart-dialog" class="cart-drawer" aria-labelledby="cart-title"><div class="dialog-head"><h2 id="cart-title">Your cart</h2><button class="button close" type="button" data-close aria-label="Close cart">×</button></div><div class="dialog-content" id="cart-content"></div></dialog>
+  <noscript><p class="noscript">Turn on JavaScript to browse and customise the menu.</p></noscript>
+</body>
+</html>
