@@ -35,7 +35,7 @@
   const zoneText = zone => `Delivery to ${zone.suburbs.join(' / ')} ${zone.postcode}`;
 
   function renderShop() {
-    document.title = `${shop.name} Pizza · ${shop.locality}`;
+    document.title = `${shop.name} · ${shop.locality}`;
     $('.brand').setAttribute('aria-label', `${shop.name} home`);
     fill('[data-shop]', shop.name);
     fill('[data-locality]', shop.locality);

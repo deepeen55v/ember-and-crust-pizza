@@ -1,4 +1,4 @@
-# Ember & Crust Pizza
+# YADAV Pizza
 
 A static, mobile-first pizza takeaway site. The sample shop is in Campsie, NSW. Menu items, prices, hours and delivery areas are illustrative.
 
